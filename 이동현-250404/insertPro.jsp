@@ -1,8 +1,8 @@
-<%@page import="javax.sql.*"%> <%-- DataSource 관련 클래스 import --%>
-<%@page import="javax.naming.*"%> <%-- JNDI 관련 클래스 import --%>
+<%@page import="javax.sql.*"%>
+<%@page import="javax.naming.*"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"
-    import ="java.sql.*" %> <%-- JDBC 관련 클래스 import --%>
+    import ="java.sql.*" %>
 <%
 	request.setCharacterEncoding("utf-8"); // Request 객체의 문자 인코딩 설정 (한글 깨짐 방지)
 
