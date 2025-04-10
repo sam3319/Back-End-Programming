@@ -46,6 +46,6 @@
 	<title>Insert title here</title>
 </head>
 <body>
-	행이 입력되었습니다! <%-- 이 메시지는 response.sendRedirect() 때문에 표시되지 않음 --%>
+	행이 입력되었습니다!
 </body>
 </html>
