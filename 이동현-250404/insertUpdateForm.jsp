@@ -12,18 +12,20 @@ pageEncoding="UTF-8"%>
 
 	// 2. ID가 존재하는 경우 DB에서 사용자 정보 조회
 	if(id !=null){
-		// 3. JNDI를 사용하여 DataSource 얻기 및 Connection 생성
+
+	// 3. JNDI를 사용하여 DataSource 얻기 및 Connection 생성
 		Context initCtx = new InitialContext();
 		DataSource ds = (DataSource)initCtx.lookup("java:comp/env/jdbc/dhlee");
 		Connection con = ds.getConnection(); 
 
-		// 4. SQL 쿼리 준비 및 실행: ID로 사용자 정보 조회
+	// 4. SQL 쿼리 준비 및 실행: ID로 사용자 정보 조회
 		String sql = "select * from stumember where id = ?";
 		PreparedStatement pstmt = con.prepareStatement(sql);
 		pstmt.setString(1, id);
 
 		ResultSet rs = pstmt.executeQuery();
-		// 5. 결과 처리: 사용자 정보가 존재하면 updateForm으로 변경
+
+	// 5. 결과 처리: 사용자 정보가 존재하면 updateForm으로 변경
 		if(rs.next()){
 			name = rs.getString("name");
 			pwd = rs.getString("pwd");
@@ -65,6 +67,7 @@ pageEncoding="UTF-8"%>
 	    </div>
 	    <br>
 	    <div class="text-center">
+
      <!-- 7. 버튼 구성: 변경, 삭제, 목록 버튼 -->
 	    		<input type="submit" value="변경" class="btn btn-secondary">  
 					<input type="button" value="삭제" class="btn btn-secondary" onclick="location.href='delete.jsp?id=<%=id%>'">
