@@ -49,7 +49,7 @@
 		pwd = rs.getString("pwd");
 %>	
 		<tr>
-			<!-- 6. 아이디 클릭 시 updateForm.jsp로 이동 -->
+	<!-- 6. 아이디 클릭 시 updateForm.jsp로 이동 -->
 			<td><a href="updateForm.jsp?id=<%=id %>"><%=id %></a></td>
 			<td><%=name %></td>
 			<td><%=pwd %></td>
