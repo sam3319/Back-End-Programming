@@ -4,7 +4,7 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>Insert title here</title>
+  <title>게시글 내용</title>  <!-- 페이지 제목 변경 -->
   <style>
   	table{
   		border: 1px solid black;
@@ -15,13 +15,15 @@
 </head>
 <body>
 	<%
-		String title = request.getParameter("title");
+		// 1. 파라미터 값 가져오기
+		String title = request.getParameter("title"); 
 		String text = request.getParameter("text");
 		String name = request.getParameter("name");
 		
 		
 	%>
 	
+		<%-- 2. 게시글 내용 출력 --%>
 		<table>
 			<thead>
 				<th>제목</th>
@@ -30,7 +32,9 @@
 				<td><%= name %></td>
 			</thead>
 			<tbody>
-				<td><%= text %></td>
+				<tr> 
+					<td colspan="4"><%= text %></td>
+				</tr>
 			</tbody>
 		</table>
 </body>
