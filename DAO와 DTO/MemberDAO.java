@@ -12,7 +12,7 @@ import javax.naming.InitialContext;
 import javax.sql.DataSource;
 
 /**==================================================
- * 프로그램명 : Member
+ * 프로그램명 : cs.dit.Member
  * 파일명 : MemberDAO.java
  * 작성일 : 2025. 4. 16.
  * 작성자 :  
