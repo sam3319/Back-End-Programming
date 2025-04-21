@@ -1,27 +1,26 @@
-<img src="https://r2cdn.perplexity.ai/pplx-full-logo-primary-dark%402x.png" class="logo" width="120"/>
-
 ## DAO와 DTO란 무엇인가?
 
-**DAO**(Data Access Object)와 **DTO**(Data Transfer Object)는 JSP(자바 서버 페이지)와 같은 웹 애플리케이션에서 데이터베이스와의 연동을 효율적으로 처리하기 위해 자주 사용되는 객체 구조입니다. 이 두 객체는 역할이 명확하게 구분되어 있으며, 코드의 유지보수성과 확장성을 높이는 데 중요한 역할을 합니다.
+**DAO**(Data Access Object)와 **DTO**(Data Transfer Object)는 JSP(자바 서버 페이지)와 같은 웹 애플리케이션에서 데이터베이스와의 연동을 효율적으로 처리하기 위해 자주 사용되는 객체 구조.
+이 두 객체는 역할이 명확하게 구분되어 있으며, 코드의 유지보수성과 확장성을 높이는 데 중요한 역할을 한다.
 
 ---
 
 **DAO (Data Access Object)**
 
-- 데이터베이스에 직접 접근하여 데이터의 **추가, 조회, 수정, 삭제(CRUD)** 작업을 수행하는 객체입니다.
-- 데이터베이스와 관련된 모든 로직(쿼리 실행, 연결 관리 등)을 DAO 클래스에 모듈화하여 구현합니다.
-- DAO를 사용하면 데이터베이스 접근 코드가 분리되어, 비즈니스 로직이나 프레젠테이션 로직과 독립적으로 관리할 수 있습니다.
-- DAO는 보통 하나의 데이터 엔티티(예: 게시판, 회원 등)마다 하나씩 작성하며, 메서드로 select, insert, update, delete 등을 제공합니다[^1_1][^1_2][^1_4][^1_5].
+- 데이터베이스에 직접 접근하여 데이터의 **추가, 조회, 수정, 삭제(CRUD)** 작업을 수행하는 객체
+- 데이터베이스와 관련된 모든 로직(쿼리 실행, 연결 관리 등)을 DAO 클래스에 모듈화하여 구현한다.
+- DAO를 사용하면 데이터베이스 접근 코드가 분리되어, 비즈니스 로직이나 프레젠테이션 로직과 독립적으로 관리할 수 있다.
+- DAO는 보통 하나의 데이터 엔티티(예: 게시판, 회원 등)마다 하나씩 작성하며, 메서드로 select, insert, update, delete 등을 제공한다.
 
 ---
 
 **DTO (Data Transfer Object)**
 
-- 데이터베이스의 데이터를 **자바 객체 형태로 변환하여 전달**하는 객체입니다.
-- DTO는 데이터만을 담는 역할을 하며, 일반적으로 **getter/setter** 메서드와 기본 생성자, 매개변수 생성자만을 가집니다.
-- 비즈니스 로직이나 데이터베이스 접근 로직은 포함하지 않습니다.
-- DTO는 데이터를 여러 계층(예: DAO ↔ Controller ↔ JSP) 사이에서 안전하게 전달하기 위해 사용됩니다.
-- DTO는 VO(Value Object)라고도 부르며, VO는 읽기 전용(immutable) 속성을 갖는 경우가 많습니다[^1_1][^1_2][^1_3][^1_8].
+- 데이터베이스의 데이터를 **자바 객체 형태로 변환하여 전달**하는 객체
+- DTO는 데이터만을 담는 역할을 하며, 일반적으로 **getter/setter** 메서드와 기본 생성자, 매개변수 생성자만을 가진다.
+- 비즈니스 로직이나 데이터베이스 접근 로직은 포함하지 않는다.
+- DTO는 데이터를 여러 계층(예: DAO ↔ Controller ↔ JSP) 사이에서 안전하게 전달하기 위해 사용된다.
+- DTO는 VO(Value Object)라고도 부르며, VO는 읽기 전용(immutable) 속성을 갖는 경우가 많다.
 
 ---
 
@@ -65,7 +64,7 @@ public class BookDAO {
 }
 ```
 
-DAO는 데이터베이스 작업을, DTO는 데이터 전달을 담당하며, 둘을 함께 사용하면 코드가 명확하고 유지보수가 쉬워집니다[^1_1][^1_2][^1_5][^1_8].
+DAO는 데이터베이스 작업을, DTO는 데이터 전달을 담당하며, 둘을 함께 사용하면 코드가 명확하고 유지보수가 쉬워진다
 
 ---
 
@@ -73,27 +72,6 @@ DAO는 데이터베이스 작업을, DTO는 데이터 전달을 담당하며, �
 
 - **DAO**는 데이터베이스와 직접 소통하는 역할(데이터 CRUD).
 - **DTO**는 데이터를 객체로 담아 계층 간 전달하는 역할(데이터 저장 및 전달).
-- 이 두 객체를 분리해 사용하면 코드가 깔끔해지고, 유지보수 및 확장에 유리합니다[^1_1][^1_2][^1_3][^1_4][^1_5][^1_8].
+- 이 두 객체를 분리해 사용하면 코드가 깔끔해지고, 유지보수 및 확장에 유리하다
 
-<div style="text-align: center">⁂</div>
-
-[^1_1]: https://12716.tistory.com/entry/JSP-Servlet-DAO와-DTO
-
-[^1_2]: https://moonheekim-code.tistory.com/83
-
-[^1_3]: https://mimah.tistory.com/entry/JSP-게시판-만들기-02-DTO와-DAO-Controller-생성
-
-[^1_4]: https://autumnly.tistory.com/40
-
-[^1_5]: https://velog.io/@max9106/JSP-DAO-DTO-tnk5eba5tu
-
-[^1_6]: https://dev.to/nullvoidkage/understanding-the-differences-dto-dao-and-pojo-in-java-3iea
-
-[^1_7]: https://blog.naver.com/kjjiskjj1/10173891163
-
-[^1_8]: https://datamoney.tistory.com/127
-
-[^1_9]: https://velog.io/@mingkiii/JSPMVC와-DAO-DTO-VO란
-
-[^1_10]: https://isaac-christian.tistory.com/entry/JDBC-MVC-Model-DAO-DTO-Memo-업무-구현
 
