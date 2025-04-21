@@ -12,10 +12,10 @@ import javax.naming.InitialContext;
 import javax.sql.DataSource;
 
 /**==================================================
- * 프로그램명 : cs.dit.Member
+ * 프로그램명 : Member
  * 파일명 : MemberDAO.java
  * 작성일 : 2025. 4. 16.
- * 작성자 :  이동현
+ * 작성자 :  
  * 변경이력 :
  * 프로그램 설명 : 데이터베이스와 연동하고 CRUD가 가능한 메소드 구현
  *===================================================*/
@@ -26,7 +26,7 @@ public class MemberDAO {
 		//connection pool을 활용한 db연동
 		Context initCtx = new InitialContext();
 		Context envCtx = (Context)initCtx.lookup("java:comp/env");
-		DataSource ds = (DataSource)envCtx.lookup("jdbc/dhlee");
+		DataSource ds = (DataSource)envCtx.lookup("jdbc/");
 		Connection con = ds.getConnection();
 		return con;
 	}
