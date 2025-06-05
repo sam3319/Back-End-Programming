@@ -1,5 +1,3 @@
-DAO(Data Access Object)와 DTO(Data Transfer Object)는 Java 기반 애플리케이션에서 데이터 처리를 위해 사용되는 핵심적인 디자인 패턴.
-
 ## DAO (Data Access Object)
 
 DAO는 **데이터베이스의 데이터에 접근하기 위한 객체**로, 데이터베이스 접근 로직과 비즈니스 로직을 분리하기 위해 사용된다. DAO는 실제로 데이터베이스에 접근하여 데이터를 삽입, 삭제, 조회, 수정 등의 **CRUD 기능을 수행**하며, Service와 데이터베이스를 연결하는 고리 역할을 한다.
